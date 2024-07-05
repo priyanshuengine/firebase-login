@@ -5,96 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-        header {
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+header {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-           
-            padding: 10px 0;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
 
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            margin: 0 10px;
-        }
+nav a {
+    color: white;
+    padding: 14px 10px; /* Adjusted padding for smaller screens */
+    text-decoration: none;
+    text-align: center;
+    margin: 0 5px; /* Adjusted margin for smaller screens */
+}
 
-        nav a:hover {
-            background-color: #575757;
-        }
+nav a:hover {
+    background-color: #575757;
+}
 
-        .container {
-            padding: 20px;
-        }
+.container {
+    padding: 10px; /* Adjusted padding for smaller screens */
+}
 
-        .welcome-message {
-            text-align: center;
-            margin: 20px 0;
-            font-family: 'Georgia', serif;
-            font-size: 2em;
-        }
+.welcome-message {
+    text-align: center;
+    margin: 10px 0; /* Adjusted margin for smaller screens */
+    font-family: 'Georgia', serif;
+    font-size: 1.5em; /* Adjusted font size for smaller screens */
+}
 
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .content > div {
-            background-color: #fff;
-            padding: 20px;
-            margin: -20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            min-width: 800px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .text {
-            max-width: 80%;
-        }
-        .image {
-            max-width: 30%;
-        }
-        img {
-            max-width: 55%;
-            border-radius: 5px;
-        }
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
-        footer {
-            background-color: black;
-            color: white;
-            border: 82px blue;
-            text-align: center;
-            padding: 2px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+.content > div {
+    background-color: #fff;
+    padding: 10px;
+    margin: 0; /* Removed negative margin for smaller screens */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    width: 100%; /* Full width for smaller screens */
+    max-width: 100%; /* Max width for smaller screens */
+    display: flex;
+    flex-direction: column; /* Stack content in columns for smaller screens */
+    align-items: center; /* Center align items for smaller screens */
+}
+
+.text {
+    max-width: 100%; /* Max width for text content */
+    margin-bottom: 10px; /* Added margin for separation */
+}
+
+.image {
+    max-width: 100%; /* Max width for images */
+    margin-bottom: 10px; /* Added margin for separation */
+}
+
+img {
+    width: 100%; /* Full width for images */
+    max-width: 100%; /* Max width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+
+    .logo {
+        font-size: 1.2em; /* Adjusted font size for smaller screens */
+    }
+
+    nav a {
+        padding: 10px; /* Adjusted padding for smaller screens */
+        margin: 0 3px; /* Adjusted margin for smaller screens */
+    }
+
+    .container {
+        padding: 5px; /* Adjusted padding for smaller screens */
+    }
+
+    .welcome-message {
+        font-size: 1.2em; /* Adjusted font size for smaller screens */
+    }
+
+    .content > div {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+
+    img {
+        border-radius: 5px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -134,7 +174,7 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2024 SignIn Page. All rights reserved.</p>
+        <p> © twentytwentyfour SignIn Page. All rights reserved. Meticulously designed by the <a href="">Priyanshu </a></p>
     </footer>
 </body>
 </html>

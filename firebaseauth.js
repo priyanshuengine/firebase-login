@@ -1,6 +1,6 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
- import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
@@ -14,6 +14,28 @@
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
+ const auth = getAuth(app);
+ auth.languageCode = 'en';
+ const provider=new GoogleAuthProvider();
+
+ const googleLogin=document.getElementById("google-signin-btn");
+ googleLogin.addEventListener("click",function(){
+    signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const user = result.user;
+    console.log(user);
+    window.location.href="homepage.html"
+   
+  }).catch((error) => {
+    
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    
+  });
+
+    
+ })
 
  function showMessage(message, divId){
     var messageDiv=document.getElementById(divId);
